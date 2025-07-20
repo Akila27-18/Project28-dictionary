@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+  <h1 class="text-success mb-4">Search Any Word</h1>
+  <form method="POST" action="{{ url_for('search') }}" class="mx-auto w-75 w-md-50 p-4 bg-light rounded shadow">
+    <div class="mb-3">
+      <input type="text" class="form-control" name="word" placeholder="Enter word..." required>
+    </div>
+    <div class="mb-3">
+      <select class="form-select" name="lang">
+        <option value="english">English</option>
+        <option value="tamil">Tamil</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Search</button>
+  </form>
+</div>
+{% endblock %}

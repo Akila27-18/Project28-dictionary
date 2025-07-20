@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+  <h2 class="mb-3 text-primary">Result for: <span class="fw-bold">{{ word }}</span> ({{ lang.title() }})</h2>
+
+  {% if definition %}
+    <div class="alert alert-success p-3">
+      <h4>Definition:</h4>
+      <p>{{ definition }}</p>
+    </div>
+  {% else %}
+    <div class="alert alert-danger">
+      <h4>Oops!</h4>
+      <p>No definition found for "<strong>{{ word }}</strong>" in {{ lang.title() }}.</p>
+    </div>
+  {% endif %}
+
+  <a href="{{ url_for('home') }}" class="btn btn-outline-primary mt-3">🔍 Search Another Word</a>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+body.bg-gradient {
+    background: linear-gradient(135deg, #99c161, #613aec);
+  }
+  
+  form {
+    background-color: #ffffffcc;
+  }
+  
+  h1, h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+  }
+  
+  .alert {
+    font-size: 1.1rem;
+  }
+  
